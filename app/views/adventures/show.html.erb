@@ -1,0 +1,31 @@
+<br/>
+<br/>
+<br/>
+	<div class="nice-box">
+		<br/>
+		<h1><%= @adventures.title %></h1>
+		<br/>
+		<h3><%= @adventures.description%></h3>
+		<br/>
+		<%= image_tag @adventures.image, class: 'img-responsive' %>
+ 		<h4><span class="label label-success"><%= number_to_human(@adventures.points, units: {unit: "points"})%></span></h4>
+		<br/>
+		<%= link_to 'Enroll', adventure_enrollments_path(@adventures), class: 'btn btn-primary', method: :post %>
+	</div>
+	<div class="col-xs-12">
+		<% @adventures.sections.each do |section| %>
+		<div class = "section">
+			<% section.title %>
+			<% section.lessons.each do |lesson| %>
+				<div class ="lesson">
+					<%= link_to lesson_path(lesson) do %>
+					<b><%= lesson.title %></b>
+					-
+					<%= lesson.subtitle %>
+					<% end %>
+				</div>
+			<% end %>
+		</div>
+		<% end %>
+	</div>
+</div>

@@ -1,0 +1,150 @@
+errors:
+
+- create a migration on the user file to add a column ==> points
+- then can run user.points to get points 
+- then when uploading tree set points
+- can deduct points either immediately OR can deduct them later...if you do not do this immediately it is possible
+to run into negative points which is not good
+- ok to deduct points straight away? 
+- if you make more credit available more people are going to use it / they will invest more 
+- monkey brain;   
+
+then in controller - when create is called --> 
+1_ validate the form (set minimum points)
+2_ does user have enough points i.e. if user.points - tree.points >=0 --> deduct the points and save the user
+3_ if not then error message --> errors[:base] or errors[:add]
+guides.rubyonrails.org
+
+
+LOCATION: MDN using geolocation --> get.CurrentPosition --> has to go into 2 form fields; LONG/LAT
+use rails geolocation -> geocoder 
+
+write a migration and add some fields _--> FLOAT lat and FLOAT long
+
+maps --> gmaps4rails
+
+
+1. Can you use materialize and bootstrap on same app? Material Design Styling for Form
+- https://codepen.io/sevilayha/pen/IdGKH --> NO CANNOT USE TOGETHER
+https://fezvrasta.github.io/bootstrap-material-design/#input
+try this out for now
+2. building out a points system that deducts points
+
+
+1. Responsive on Mobile is not working!
+- without meta tag it will zoom out the website hence why it is not responsive on mobile
+
+2.current_user.enrollments.create(course: current_course)
+3. Video styling not working
+4. Homepage feed build based on latest trees uploaded
+--> in the controller for the file need to define variable e.g. @latest_trees 
+--> model is course 
+--> write a query to get the tree you want
+--> rails creates two timestamps    
+	t.datetime "created_at"
+    t.datetime "updated_at"
+--> if you want the latest update; Course.all.order(updated_at: :desc).limit(3)
+--> then in template; @latest_trees.each do etc
+--> if you want the order descending:
+
+
+
+
+1. HEROKU
+- none of the pages work !
+- heroku logs -t
+- //heroku run rake db:setup// --> the databse had not been setup in heroku
+- must run any time you create a new table 
+- any time you run a migration rake db:migrate --> once ready to deploy to heroku must //heroku run rake db:migrate// 
+
+- check image path and use an image tag instead
+
+2. git commit -m
+only files that are staged
+
+3. Change the data type of points to integer
+
+4. adding insert image functionality directly from a camera
+
+5. geolocation from 2 sources
+
+6. killall ruby --> end any existing sessions running
+
+7. image upload from web app  <input type="file" accept="image/*" capture="camera">
+
+8. codepen for video tool http://codepen.io/heff/pen/EarCt
+
+9. cmd-shift-f --> to replace the breaks and then fix some padding and shiz
+
+CURRENT ERROR:
+
+
+Nice Things:
+
+memoization:
+1. if we've looked up the current_section beforehand use the value that we looked up previously
+2. If we haven't looked up this section before, go into the database, look it up and also make sure to remember the value in case we need to look it up again later --> 
+
+if @current_section == nil
+  @current_section = Section.find(params[:section_id])
+  @current_section
+else
+  @current_section
+end
+
+OR 
+
+@current_section ||= Section.find(params[:section_id])
+
+
+4. To Wrap multiple content into single link
+     <%= link_to lesson_path(lesson) do %>  --> use a for loop that includes the necessary elements
+              <b><%= lesson.title %></b>
+              -
+              <%= lesson.subtitle %>
+            <% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+new music
+
+nusrat fateh ali khan
+badbadnotgood
+pinkman
+roly porter
+chris liebling
+gquom oh
+Liberation Technologies label
+https://www.mixcloud.com/HecticEclectic/stretch-armstrong-bobbito-2231995-pt1/

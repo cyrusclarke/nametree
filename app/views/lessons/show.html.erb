@@ -1,0 +1,19 @@
+<br/>
+<br/>
+<br/>
+	<div class="nice-box">
+		<br/>
+		<h1><%= current_lesson.title %></h1>
+		<br/>
+		<h3><%= current_lesson.subtitle %></h3>
+		<br/>
+		 <video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid" width="200"height="100" controls preload="auto" poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+  	  		<source src="<%= current_lesson.video.to_s %>" type='video/mp4'>	
+ 	   			<p class="vjs-no-js">
+    				To view this video please enable JavaScript, and consider upgradiny to a web browser that 
+      				<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    			</p>
+  		</video>
+		<%= link_to 'Video', current_lesson.video.to_s %>		 
+	</div>
+<br/>

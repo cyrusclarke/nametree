@@ -1,0 +1,13 @@
+<br/>
+<br/>
+<br/>
+<br />
+<div class="booyah-box col-xs-10 col-xs-offset-1">
+	<h1>A new lesson</h1>
+	<%= simple_form_for @lesson, url: admin_section_lessons_path(current_section) do |f| %>
+		<%= f.input :title %>
+		<%= f.input :subtitle %>
+		<%= f.input :video %>
+		<%= f.submit "add the lesson" %>
+	<% end %>
+</div>

@@ -1,0 +1,43 @@
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="nice-box">
+	<h1 class="text-center col-xs-6">Adventure Name:</h1>
+	<h1 class="text-center col-xs-6"><b><%= current_course.title %></h1></b>
+	<br class="clr">
+	<br class="clr">
+	<h3 class="text-center col-xs-6">Points:</h3>
+	<h3 class="text-center col-xs-6"><b><%= current_course.points%></b></h3>
+	<br class="clr">
+	<br class="clr">
+	<h3 class="text-center col-xs-6">What is it about?</h3>
+	<h3 class="text-center col-xs-6"><b><%= current_course.description%></b></h3>
+	<br class="clr">
+	<br class="clr">
+		<div class ="text-center">
+			<br class="clr">
+			<%= link_to 'add new section', new_admin_course_section_path(current_course), class: 'btn btn-primary'%>
+			<%= link_to 'preview your creation', adventure_path(current_course), class: 'btn btn-warning'%>
+			<br class="clr">
+		</div>
+	<ul> 
+		<% current_course.sections.each do |section| %>
+			<li>
+			 	<%= section.title %>
+			 	<%= link_to 'New Lesson', new_admin_section_lesson_path(section) %>
+			 	<ul>
+			 		<% section.lessons.each do |lesson| %>
+			 			<li>
+			 				<b><%= lesson.title %></b>
+			 				-
+			 				<%= lesson.subtitle %>
+			 			</li> 
+			 		<% end %>
+			 	</ul>
+			 	<br class="clr">
+			</li>
+		<%end%>
+	</ul>
+<br class="clr">
+</div>

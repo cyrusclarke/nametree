@@ -1,0 +1,16 @@
+<!-- #show.html.erb -->
+<br>
+<br>
+<br>
+<h1> USER DASHBOARD </h1>
+	<h2><%= @user.email %></h2>
+	<%= @user.courses.each do |course| %>
+		<h2><%= course.title %></h2>
+				<%= link_to adventure_path(course) do %>
+					<div class="center-block">
+						<a class="thumbnail">
+						<%= image_tag course.image, class: 'img-responsive'%>
+				<% end %>
+		<% end %>
+
+

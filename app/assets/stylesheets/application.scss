@@ -1,0 +1,140 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "footer";
+@import "login";
+@import "video";
+@import "custom";
+
+
+h1, h2, h3, h4, h5, h6, .navbar {
+  margin:0;
+}
+
+h3,h4,h5,h6 {
+    font-family: 'roboto'; 
+    text-transform: capitalize;
+    
+
+}
+
+.grid-home{
+    font-family: 'chicagobitmap-regular';
+      font-weight: 100;
+      color: rgb(0,0,0);
+      text-align: center;
+      font-size: 30px;
+      padding-top: 20px;
+      margin-top: 20px;
+
+}
+
+.navbar {
+	border-radius: 0;
+    font-family: 'chicagobitmap-regular';
+  	font-weight: 200;
+  	background-color: black;
+  	outline: none;
+  	border: none;
+  	
+}
+
+.navbar-fixed-top {
+  background-color: rgba(97,157,91,0); 
+}
+
+
+.navbar a.navbar-brand {
+    font-family: 'chicagobitmap-regular';
+  		font-weight: 100;
+  		color: black;
+  		box-shadow: 0px 1px 3px #2a2a2a;
+  		background-color: rgba(97,157,91,100); 
+}
+
+.navbar-nav {
+	  	background-color: rgba(248,231,28,100); 
+      box-shadow: 0px 1px 3px #2a2a2a;
+
+
+}
+
+.hero {
+  	/*background: url('oak8bit.jpg') no-repeat center center fixed; */ 
+    background: image-url("oak8bit.png") no-repeat #000;
+    background-attachment: fixed;
+    background-size: 50%;
+    background-position: center;  
+    height: 600px;
+    padding-top: 10px;
+}
+  @media (min-width: 600px) {
+  .hero{background-size: 50%};
+  }
+
+.herotext {
+	  font-family: 'chicagobitmap-regular';
+    font-weight: 100;
+    font-size: 60px;
+	  background:rgba(0,0,0,0.5);
+  	color:white;
+  	text-align: center;
+  	text-shadow: rgba(255,255,255,0.5) 1px 1px;
+    padding-bottom: 50px;
+}
+
+.h2text {
+    font-family: 'chicagobitmap-regular';
+    font-weight: 100;
+    color: white;
+    text-align: center;
+    text-shadow: rgba(255,255,255,0.5) 1px 1px;
+    padding-top: 100px;
+}
+
+.btn-lg {
+  border-radius:0;
+}
+
+.nice-box {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+}
+
+.clr {
+  clear: both;
+}
+
+.field_with_errors {
+  color: #ff3333;
+  background-color: #FFEEEE;
+  border-radius: 3px;
+  padding:8px;
+  margin:10px;
+}
+
+.btn-warning {
+  color: rgba(97,157,91,100);
+}
+
+.map {
+        height: 100%;
+}
+
+
+

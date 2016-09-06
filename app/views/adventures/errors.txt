@@ -1,0 +1,5 @@
+errors:
+
+1. carrierwave issue: NoMethodError in Admin::CoursesController#create
+
+2. DB issue with sections

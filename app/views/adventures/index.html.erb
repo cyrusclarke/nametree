@@ -1,0 +1,23 @@
+<br/>
+<br/>
+<br/>
+<div class="container">
+		<h1>START A NEW TREE ADVENTURE</h1>
+		<% @adventures.each do |adventure| %>
+	</div>	
+ 	<div class="col-sm-6 col-xs-12">
+ 		<div class="nice-box">
+ 		<br/>
+ 		<h2><%= link_to adventure.title, adventure_path(adventure) %></h2>
+ 		<%= image_tag adventure.image, class: 'img-responsive' %>
+ 		<h3><%= adventure.description%></h3>
+ 		<h4><%= adventure.points%></h4>
+ 		<br class="clr">
+ 	<div class ="col-xs-3 col-xs-offset-9">
+ 		<%= link_to 'Start Now', adventure_path(adventure), class: 'btn btn-primary' %>
+		<br class="clr">
+	</div>
+	</div>
+	<br class="clr">
+	<%end%>
+</div>
